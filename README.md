@@ -195,13 +195,18 @@ JVM, JDK,JRE之间的关系：
 ##### 1.2.3.1 IDEA
 项目结构：
 - project
+  1) 关闭项目：file - close project
+  2) 新建项目：new project - empty project
 - model 
+  1) 新建模块：file-project structure - model - + -New model- java
+  2) 删除模块
+  3) 修改模块
+  4) 导入模块
 - package
-- class
-
-
-
-
+- class:
+  1) 新建类：点对应的package,new - java class
+  2) 修改类名: 点对应点class-refactor-rename
+  3) 删除类:点对应的class - delete
 
 ##### 1.2.3.2 运算符
 
