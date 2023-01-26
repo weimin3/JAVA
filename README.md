@@ -77,20 +77,20 @@ JVM, JDK,JRE之间的关系：
 > ``` Java
 > int a = 1;
 > System.out.println(a);
-> ```
+
 > - 2）参与计算
 > ```Java
 > int a = 1;
 > int b = 2;
 > System.out.println(a+b);
-> ```
+
 > - 3） 修改记录的值
 > ```Java
 > int a = 1;
 > System.out.println(a);
 > a = 2;
 > System.out.println(a);
-> ```
+
 > 变量的注意事项：
 > - 只能存一个值；
 > - 变量名称不能重复定义；
@@ -116,7 +116,7 @@ JVM, JDK,JRE之间的关系：
 > >        System.out.println(num);
 > >    }
 > > }
-> > ```
+
 > 数据类型：
 > - 基本数据类型
 > 
@@ -187,20 +187,25 @@ JVM, JDK,JRE之间的关系：
 > >             System.out.println(k);
 > > }
 > > }
-```
-> 
 
 > 计算机的存储
-> 
-
-
-
-
-
-
-
 
 #### 1.2.3 Idea和运算符
+
+##### 1.2.3.1 IDEA
+项目结构：
+- project
+- model 
+- package
+- class
+
+
+
+
+
+##### 1.2.3.2 运算符
+
+> 
 
 #### 1.2.4 判断和循环
 
