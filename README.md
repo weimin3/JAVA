@@ -69,8 +69,10 @@ JVM, JDK,JRE之间的关系：
 > - \t 制表符： 在打印的时候，把前面字符串的长度补齐到8，或8的倍数。打印时用于对齐
  
 > 变量：在程序执行过程中，值可能变化的量
-> - 定义格式： 数据类型 变量名 = 数据值 ; 例如 ``` int a = 18;```
-> - 变量的使用方式 ： 
+> 
+> 定义格式： 数据类型 变量名 = 数据值 ; 例如 ``` int a = 18;```
+> 
+> 变量的使用方式 ： 
 > - 1） 输出打印 
 > ``` Java
 > int a = 1;
@@ -95,7 +97,100 @@ JVM, JDK,JRE之间的关系：
 > - 一条语句可以定义多个变量；
 > - 变量在使用之前一定要进行赋值；
 > - 变量的作用域范围。
-> - 
+> 
+> >变量的练习：
+> > 一辆公交车从始发站出发，车上没有乘客，在第一站上来1位乘客；第二站上来2位乘客，下去1位乘客；
+> > 第三站上来2位乘客，下去1位乘客；第四站下去1位乘客；第五站上去1位乘客。
+> >
+> > 问：到终点，初司机外车上共有多少人？
+> > ```Java
+> > public class Passenger{
+> >    public static void main(String[] args){
+> >        int num =0; // 初始站没有乘客
+> >        num = num + 1; //第一站上来1位乘客
+> >        num = num + 2 -1; // 第二站上来2位乘客，下去1位乘客
+> >        num = num + 2 -1; //第三站上来2位乘客，下去1位乘客
+> >        num = num - 1; //第四站下去1位乘客
+> >        num = num + 1; //第五站上来1位乘客
+> >        //输出终点站乘客数量
+> >        System.out.println(num);
+> >    }
+> > }
+> > ```
+> 数据类型：
+> - 基本数据类型
+> 
+| 数据类型 | 关键字         | 取值范围                                                                 |
+|------|-------------|----------------------------------------------------------------------|
+| 整数   | byte        | -128 ～ 127                                                           |
+|      | short       | -32768 ～ 32767                                                       |
+|      | int (默认)    | -2147483648 ～ 2147483647（10位数）                                       |
+|      | long        | 19位数 （如果定义long类型的变量，在数据值的后面需要加***L*** 作为后缀）                          |
+| 浮点型  | float       | -3.401298e-38 ~ 3.401298e-38 （如果定义float类型的变量，在数据值的后面需要加***F*** 作为后缀） |
+|      | double （默认） | -4.9000000e-324 ~ 1.797693e+308                                      |
+| 字符型  | char        | 0-65535                                                              |
+| 布尔   | boolean     | true, false                                                          |
+> 整数和小数取值范围大小关系：
+> double > float > long > int > short > byte
+> > 练习：输出个人信息：
+> > 姓名：张三
+> > 年龄：18
+> > 性别：男
+> > 身高：180.1
+> > 婚否：否
+> >```java
+> >public class PersonalInfo{
+> >     public static void main(String[] args){
+> >         String name = "张三";
+> >         int age = 18 ;
+> >         char gender = 'male'
+> >         double height = 180.1;
+> >         boolean single = true;
+> >         System.out.println(name);
+> >         System.out.println(age);
+> >         System.out.println(gender);
+> >         System.out.println(height);
+> >         System.out.println(single);
+> >}
+> >
+> >}
+
+> - 引用数据类型
+>
+> >标识符: 给类，方法，变量等起的名字。
+> >- 由数字，字母，下划线(_)和美元符($)组成
+> >- 不能以数字开头
+> >- 不能是关键字
+> >- 区分大小写
+> >- 小驼峰命名法：*** 方法、变量*** 。 标识符是一个单词的时候，全部小写；多个单词时，第一个单词首字母小写，其他单词首字母大写。```firstName``
+> >- 大驼峰命名法：*** 类名 *** 标识符是一个单词的时候，首字母大写 ```Student```, 由多个单词组成时，每个单词的首字母大写，```GoodStudent```
+> >- 见名知意
+>
+> >键盘录入
+> >
+> > 第一步：导包 ```import java.util.Scanner;```
+> >
+> > 第二步：创建对象 ```Scanner sc = new Scanner(System.in);```
+> >
+> > 第三步：接收数据 ```int i = sc.nextInt();```
+> > 
+> > 练习：键盘输入两个整数，求出它们的和并打印
+> > ```java
+> > import java.util.Scanner;
+> > public class SumNum{
+> >       public static void main(String[] args){
+> >             //对象创建一次可多次用
+> >             Scanner sc = new Scanner(System.in);
+> >             int i = sc.nextInt();
+> >             int j = sc.nextInt();
+> >             int k = i + j;
+> >             System.out.println(k);
+> > }
+> > }
+```
+> 
+
+> 计算机的存储
 > 
 
 
