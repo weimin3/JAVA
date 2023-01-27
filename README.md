@@ -2,9 +2,9 @@
 一个计算机小白学习JAVA的过程
 <!-- TOC -->
 * [JAVA](#java)
-  * [1. JAVA 基础学习](#1-java-)
-    * [1.1 CMD常见命令（windows操作系统）](#11-cmdwindows)
-    * [1.2 Java 基础语法](#12-java-)
+  * [1. JAVA 基础学习](#1-java-基础学习)
+    * [1.1 CMD常见命令（windows操作系统）](#11-cmd常见命令（windows操作系统）)
+    * [1.2 Java 基础语法](#12-java-基础语法)
       * [1.2.1 Java 入门](#121-java-)
       * [1.2.2 小概念](#122-)
       * [1.2.3 Idea和运算符](#123-idea)
@@ -330,13 +330,59 @@ JVM, JDK,JRE之间的关系：
 
 > - 逻辑运算符
 > 
+> 短路逻辑运算符：
+> && 和 || 效率较普通逻辑运算符高，效果相同，因此常用。
 > 
+| 符号  |  作用   | 说明               |
+|-----|-----|------------------|
+| &   | 与    | 两边都为真，结果为真       |
+| ｜   |  或   | 两边都为假，结果为假       |
+| ^   |  异或 | 相同为false,不同为true |
+| ！   | 非    | 取反               |
+> [练习2](A-Operator/src/Demo1/Exercise2.java)： 数字6
+> 键盘录入两个整数，如果其中一个为6，最终结果输出为true; 如果它们的和为6的倍数，最终结果输出true,其他情况都是false.
+> ```java
+> import java.util.Scanner;
+> public class Exercise2 {
+>     public static void main(String[] args) {
+>     //创建键盘录入对象
+>       Scanner sc = new Scanner(System.in);
+>     //创建两个变量接收键盘录入值
+>       System.out.println("请输入第一个值：");
+>       int num1 = sc.nextInt();
+>       System.out.println("请输入第二个值：");
+>       int num2 = sc.nextInt();
+>     //两个值中有一个为6则真 或 和为6的倍数（和%6=0）为真
+>       int num3 = num1 + num2;
+>       boolean flag = (num1 == 6 || num2 == 6) || (num3 % 6 == 0);
+>     //打印出判断值
+>       System.out.println(flag);
+>     }
+> }
 
-> - 三元运算符
-> 
-> 
 
-> 运算符优先级
+> - 三元运算符: 根据判断结果得到不同结果
+>   - 格式： 关系表达式？表达式1：表达式2;   （说明：关系表达式为真，选择表达式1，否则选择表达式2）
+>   - **注意**：三元表达式结果一定要用，可以赋值，可以直接打印
+>   - 范例： ```int max = 10>20 ? 10 : 20; ```
+>   
+> [练习3](A-Operator/src/Demo1/Exercise3.java)：三个人身高分别是150cm, 210cm, 165cm, 获取最高身高
+> ```java
+> public class Exercise3 {
+>    public static void main(String[] args) {
+>        //定义三个变量记录身高
+>        int weight1 = 150;
+>        int weight2 = 210;
+>        //先比较前两个变量的值，再用前两个变量的结果和第三个值比较
+>        int temp = weight1 > weight2? weight1 : weight2;
+>       int max = temp > weight3? temp : weight3;
+>        //打印结果
+>        System.out.println(max);
+>    }
+>}
+>
+**运算符优先级: "( )" 优先于所有**
+
 
 
 
