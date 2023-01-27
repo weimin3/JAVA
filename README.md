@@ -1,8 +1,8 @@
 # JAVA
 一个计算机小白学习JAVA的过程
 <!-- TOC -->
-* [JAVA](#java)
-  * [1. JAVA 基础学习](#1-java-基础学习)
+[JAVA](#java)
+* [1. JAVA 基础学习](#1-java-基础知识)
     * [1.1 CMD常见命令（windows操作系统）](#11-cmd常见命令（windows操作系统）)
     * [1.2 Java 基础语法](#12-java-基础语法)
       * [1.2.1 Java 入门](#121-java-入门)
@@ -19,9 +19,9 @@
     * [1.5 字符串](#15-字符串)
     * [1.6 集合](#16-集合)
     * [1.7 拼图游戏（综合应用）](#17-综合应用)
-  * [2. JAVA 进阶知识](#2-java-进阶知识)
+* [2. JAVA 进阶知识](#2-java-进阶知识)
 <!-- TOC -->
-## 1. JAVA 基础学习
+## 1. JAVA 基础知识
 ### 1.1 CMD常见命令（windows操作系统）
 - 盘符名称+冒号：盘符切换
 
@@ -211,9 +211,9 @@ JVM, JDK,JRE之间的关系：
 
 > 计算机的存储
 
-#### 1.2.3 Idea和运算符
+### 1.3 Idea和运算符
 
-##### 1.2.3.1 IDEA
+#### 1.3.1 IDEA
 项目结构：
 - project
   1) 关闭项目：file - close project
@@ -228,7 +228,7 @@ JVM, JDK,JRE之间的关系：
   1) 新建类：点对应的package,new - java class
   2) 修改类名: 点对应点class-refactor-rename
   3) 删除类:点对应的class - delete
-##### 1.2.3.2 运算符
+#### 1.3.2 运算符
 - 运算符和表达式
 
    1）运算符：对字面量或变量进行操作的符号 ``` + , - ```
@@ -383,26 +383,137 @@ JVM, JDK,JRE之间的关系：
 >
 **运算符优先级: "( )" 优先于所有**
 
+### 1.4 流程控制语句
+#### 1.4.1 顺序结构
+按代码顺序，从上到下依次执行。
 
+#### 1.4.2 分支结构 
+##### 1.4.2.1 if
+if 语句用来判断。
 
+有3种格式：
+> 格式1：关系表达式值为true,则执行语句体，为false,则不执行语句体。 继续执行后面的语句
+> 
+> ``` 
+> if(关系表达式){
+> 语句体
+> }
+> ```
+> - 如果对一个布尔类型的变量进行判断，不要用 == 号
+> 
+> ```java
+> boolean flag = false;
+> //（flag）表示 flag== true
+> if(flag){
+>  System.out.println("flag is true")
+> }
+> ```
+> 
+> [练习](B-IF/src/Demo1/Exercise1.java)：自动驾驶
+> 
+> 自动驾驶车遇红灯停止，遇绿灯行驶，遇黄灯减速
+> ```java
+> public class Exercise1 {
+>    public static void main(String[] args) {
+>        boolean isGreenLight = true;
+>        boolean isRedLight = false;
+>        boolean isYellowLight = false;
+>        if(isGreenLight){ 
+>           System.out.println("move on ");
+>        }
+>        if(isRedLight){
+>            System.out.println("stop!");
+>        }
+>        if(isYellowLight){
+>            System.out.println("slow down");
+>        }
+>   }
+> }
 
-#### 1.2.4 判断和循环
+> 格式2：关系表达式值为true,则执行语句体1， 为false,则执行语句体2。
+> 
+> ```java
+> if(关系表达式){
+>    语句体1；
+> } else {
+>   语句体2；
+> }
+> ```
+> [练习](B-IF/src/Demo1/Exercise2.java)：
+> 
+> 键盘录入一个整数，表示钱包里的钱。如果大于等于100元，吃烧烤；否则吃米粉
+> ```java
+> import java.util.Scanner;
+> public class Exercise2 {
+>      public static void main(String[] args) {
+>           //创建键盘录入对象
+>           Scanner sc = new Scanner(System.in);
+>           //输入值
+>           System.out.println("请输入钱包内现金数量：");
+>           int money = sc.nextInt();
+>           //判断
+>           if(money >= 100){
+>               System.out.println("吃烧烤");
+>           } else {
+>               System.out.println("吃米粉");
+>           }
+>       }
+> }
+> ```
+> [练习](B-IF/src/Demo1/Exercise3.java)： 电影院选座
+> 
+> 某电影院售卖100张票，序号1-100，奇数票号坐左侧，偶数票号坐右侧；键盘录入一个整数表示票号，如果为奇数，打印坐左边；偶数打印坐右边。
+> ```java
+> public class Exercise3 {
+>    public static void main(String[] args) {
+>        Scanner sc = new Scanner(System.in);
+>       System.out.println("请输入票号：");
+>        int ticket = sc.nextInt();
+>        //先判断输入是否在1-100之间，再判断奇偶数
+>        if(ticket >0 && ticket < 101){
+>            if(ticket % 2 == 0){
+>                System.out.println("请坐右边");
+>            }else{
+>                System.out.println("请坐左边");
+>            }
+>        } else{
+>            System.out.println("输入错误。");
+>        }
+>    }
+> }
+> ```
 
-#### 1.2.5 方法
+> 格式3：
+> ```java
+> if(关系表达式){
+>    语句体1；
+> } else if {
+>   语句体2；
+> }
+> ...
+> else {
+>   语句体n+1；
+> }
+> ```
+##### 1.4.2.2 switch 
 
-#### 1.2.6 数组
+#### 1.4.3 循环结构
 
-#### 1.2.7 练习题
+### 1.5 方法
 
-### 1.3 面向对象
+### 1.6 数组
 
-### 1.4 API
+### 1.7 练习题
 
-### 1.5 字符串
+### 1.8 面向对象
 
-### 1.6 集合
+### 1.9 API
 
-### 1.7 拼图游戏（综合应用）
+### 1.10 字符串
+
+### 1.11 集合
+
+### 1.12 拼图游戏（综合应用）
 
 
 ## 2. JAVA 进阶知识
