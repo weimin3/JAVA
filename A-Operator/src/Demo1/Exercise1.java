@@ -20,8 +20,8 @@ public class Exercise1 {
         //拆出百位：除100后，取模10，例如（121/100）% 10 =1
         int l = (i / 100) % 10;
         //输出结果
-        System.out.println(j);
-        System.out.println(k);
-        System.out.println(l);
+        System.out.println("个位数是：" + j);
+        System.out.println("十位数是："+ k);
+        System.out.println("百位数是："+ l);
     }
 }
