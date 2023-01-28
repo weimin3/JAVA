@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/A-Operator/A-Operator.iml" filepath="$PROJECT_DIR$/A-Operator/A-Operator.iml" />
       <module fileurl="file://$PROJECT_DIR$/B-IF/B-IF.iml" filepath="$PROJECT_DIR$/B-IF/B-IF.iml" />
       <module fileurl="file://$PROJECT_DIR$/C-Switch/C-Switch.iml" filepath="$PROJECT_DIR$/C-Switch/C-Switch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/D-For/D-For.iml" filepath="$PROJECT_DIR$/D-For/D-For.iml" />
+      <module fileurl="file://$PROJECT_DIR$/E-While/E-While.iml" filepath="$PROJECT_DIR$/E-While/E-While.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JAVA.iml" filepath="$PROJECT_DIR$/.idea/JAVA.iml" />
     </modules>
   </component>

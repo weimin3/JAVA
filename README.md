@@ -1,26 +1,33 @@
 # JAVA
 一个计算机小白学习JAVA的过程
+---
 <!-- TOC -->
-[JAVA](#java)
-* [1. JAVA 基础学习](#1-java-基础知识)
-    * [1.1 CMD常见命令（windows操作系统）](#11-cmd常见命令（windows操作系统）)
+* [JAVA](#java)
+  * [1. JAVA 基础知识](#1-java-基础知识)
+    * [1.1 CMD常见命令（windows操作系统）](#11-cmd常见命令-windows操作系统)
     * [1.2 Java 基础语法](#12-java-基础语法)
       * [1.2.1 Java 入门](#121-java-入门)
       * [1.2.2 小概念](#122-小概念)
-      * [1.2.3 Idea和运算符](#123-idea和运算符)
-        * [1.2.3.1 IDEA](#1231-idea)
-        * [1.2.3.2 运算符](#1232-运算符)
-      * [1.2.4 判断和循环](#124-判断和循环)
-      * [1.2.5 方法](#125-方法)
-      * [1.2.6 数组](#126-数组)
-      * [1.2.7 练习题](#127-练习题)
-    * [1.3 面向对象](#13-面向对象)
-    * [1.4 API](#14-api)
-    * [1.5 字符串](#15-字符串)
-    * [1.6 集合](#16-集合)
-    * [1.7 拼图游戏（综合应用）](#17-综合应用)
-* [2. JAVA 进阶知识](#2-java-进阶知识)
+    * [1.3 Idea和运算符](#13-idea和运算符)
+      * [1.3.1 IDEA](#131-idea)
+      * [1.3.2 运算符](#132-运算符)
+    * [1.4 流程控制语句](#14-流程控制语句)
+      * [1.4.1 顺序结构](#141-顺序结构)
+      * [1.4.2 分支结构](#142-分支结构)
+        * [1.4.2.1 if](#1421-if)
+        * [1.4.2.2 switch](#1422-switch)
+      * [1.4.3 循环结构](#143-循环结构)
+    * [1.5 方法](#15-方法)
+    * [1.6 数组](#16-数组)
+    * [1.7 练习题](#17-练习题)
+    * [1.8 面向对象](#18-)
+    * [1.9 API](#19-api)
+    * [1.10 字符串](#110-)
+    * [1.11 集合](#111-)
+    * [1.12 拼图游戏（综合应用）](#112-)
+  * [2. JAVA 进阶知识](#2-java-)
 <!-- TOC -->
+---
 ## 1. JAVA 基础知识
 ### 1.1 CMD常见命令（windows操作系统）
 - 盘符名称+冒号：盘符切换
@@ -252,33 +259,10 @@ JVM, JDK,JRE之间的关系：
 > 取模的应用：
 > - 1. 用于判断A是否可以被B整除；``` 10 % 3 = 1```
 > - 2. 用于判断一个是是否是偶数, A % 2 =0,A 是偶数，如果是1，则为奇数；
-> > [练习1](A-Operator/src/Demo1/Exercise1.java)：数值拆分 
+> > 练习1：数值拆分 【[CODE](A-Operator/src/Demo1/Exercise1.java)】
 > >
 > > 键盘录入一个三位数，将其拆分为个位，十位，百位后，打印在控制台。
-> > ```java
-> > import java.util.Scanner;
-> > public class Exercise1 {
-> >     public static void main(String[] args) {
-> >     //创建键盘录入对象
-> >         Scanner sc = new Scanner(System.in);
-> >      //提示输入数据
-> >         System.out.println("请输入一个三位整数：");
-> >     // 定义一个变量接收输入值
-> >         int i = sc.nextInt();
-> >     //拆分出个位：取模10，例如 5 % 10 = 5 121 % 10 = 1
-> >         int j = i % 10;
-> >     // 拆分出十位：除10后， 取模10， 例如 (121 / 10) % 10 = 2
-> >         int k = (i / 10) % 10;
-> >     //拆出百位：除100后，取模10，例如（121/100）% 10 =1
-> >         int l = (i / 100) % 10;
-> >     //输出结果
-> >         System.out.println("个位数是：" + j);
-> >         System.out.println("十位数是："+ k);
-> >         System.out.println("百位数是："+ l);
-> >     }
-> > }
-> > ```
-> 
+
 > "+" 操作的三种情况：
 > - 1. 数字相加：数据类型不一样，不能进行计算，需转成一样才能进行计算 
 > 
@@ -339,47 +323,15 @@ JVM, JDK,JRE之间的关系：
 | ｜   |  或   | 两边都为假，结果为假       |
 | ^   |  异或 | 相同为false,不同为true |
 | ！   | 非    | 取反               |
-> [练习2](A-Operator/src/Demo1/Exercise2.java)： 数字6
+> 练习2： 数字6 【[CODE](A-Operator/src/Demo1/Exercise2.java)
 > 键盘录入两个整数，如果其中一个为6，最终结果输出为true; 如果它们的和为6的倍数，最终结果输出true,其他情况都是false.
-> ```java
-> import java.util.Scanner;
-> public class Exercise2 {
->     public static void main(String[] args) {
->     //创建键盘录入对象
->       Scanner sc = new Scanner(System.in);
->     //创建两个变量接收键盘录入值
->       System.out.println("请输入第一个值：");
->       int num1 = sc.nextInt();
->       System.out.println("请输入第二个值：");
->       int num2 = sc.nextInt();
->     //两个值中有一个为6则真 或 和为6的倍数（和%6=0）为真
->       int num3 = num1 + num2;
->       boolean flag = (num1 == 6 || num2 == 6) || (num3 % 6 == 0);
->     //打印出判断值
->       System.out.println(flag);
->     }
-> }
-
 
 > - 三元运算符: 根据判断结果得到不同结果
 >   - 格式： 关系表达式？表达式1：表达式2;   （说明：关系表达式为真，选择表达式1，否则选择表达式2）
 >   - **注意**：三元表达式结果一定要用，可以赋值，可以直接打印
 >   - 范例： ```int max = 10>20 ? 10 : 20; ```
 >   
-> [练习3](A-Operator/src/Demo1/Exercise3.java)：三个人身高分别是150cm, 210cm, 165cm, 获取最高身高
-> ```java
-> public class Exercise3 {
->    public static void main(String[] args) {
->        //定义三个变量记录身高
->        int weight1 = 150;
->        int weight2 = 210;
->        //先比较前两个变量的值，再用前两个变量的结果和第三个值比较
->        int temp = weight1 > weight2? weight1 : weight2;
->       int max = temp > weight3? temp : weight3;
->        //打印结果
->        System.out.println(max);
->    }
->}
+> 练习3：三个人身高分别是150cm, 210cm, 165cm, 获取最高身高 【[CODE](A-Operator/src/Demo1/Exercise3.java)】
 >
 **运算符优先级: "( )" 优先于所有**
 
@@ -409,26 +361,10 @@ if 语句用来判断。
 > }
 > ```
 > 
-> [练习](B-IF/src/Demo1/Exercise1.java)：自动驾驶
-> 
-> 自动驾驶车遇红灯停止，遇绿灯行驶，遇黄灯减速
-> ```java
-> public class Exercise1 {
->    public static void main(String[] args) {
->        boolean isGreenLight = true;
->        boolean isRedLight = false;
->        boolean isYellowLight = false;
->        if(isGreenLight){ 
->           System.out.println("move on ");
->        }
->        if(isRedLight){
->            System.out.println("stop!");
->        }
->        if(isYellowLight){
->            System.out.println("slow down");
->        }
->   }
-> }
+> > 练习：自动驾驶 【[CODE](B-IF/src/Demo1/Exercise1.java)】
+> > 
+> > 自动驾驶车遇红灯停止，遇绿灯行驶，遇黄灯减速
+
 
 > 格式2：关系表达式值为true,则执行语句体1， 为false,则执行语句体2。
 > 
@@ -439,49 +375,14 @@ if 语句用来判断。
 >   语句体2；
 > }
 > ```
-> [练习](B-IF/src/Demo1/Exercise2.java)：
+> > 练习：【[CODE](B-IF/src/Demo1/Exercise2.java)】
+> > 
+> > 键盘录入一个整数，表示钱包里的钱。如果大于等于100元，吃烧烤；否则吃米粉
+>
 > 
-> 键盘录入一个整数，表示钱包里的钱。如果大于等于100元，吃烧烤；否则吃米粉
-> ```java
-> import java.util.Scanner;
-> public class Exercise2 {
->      public static void main(String[] args) {
->           //创建键盘录入对象
->           Scanner sc = new Scanner(System.in);
->           //输入值
->           System.out.println("请输入钱包内现金数量：");
->           int money = sc.nextInt();
->           //判断
->           if(money >= 100){
->               System.out.println("吃烧烤");
->           } else {
->               System.out.println("吃米粉");
->           }
->       }
-> }
-> ```
-> [练习](B-IF/src/Demo1/Exercise3.java)： 电影院选座
-> 
-> 某电影院售卖100张票，序号1-100，奇数票号坐左侧，偶数票号坐右侧；键盘录入一个整数表示票号，如果为奇数，打印坐左边；偶数打印坐右边。
-> ```java
-> public class Exercise3 {
->    public static void main(String[] args) {
->        Scanner sc = new Scanner(System.in);
->       System.out.println("请输入票号：");
->        int ticket = sc.nextInt();
->        //先判断输入是否在1-100之间，再判断奇偶数
->        if(ticket >0 && ticket < 101){
->            if(ticket % 2 == 0){
->                System.out.println("请坐右边");
->            }else{
->                System.out.println("请坐左边");
->            }
->        } else{
->            System.out.println("输入错误。");
->        }
->    }
-> }
-> ```
+> > 练习： 电影院选座 【[CODE](B-IF/src/Demo1/Exercise3.java)】
+> > 
+> > 某电影院售卖100张票，序号1-100，奇数票号坐左侧，偶数票号坐右侧；键盘录入一个整数表示票号，如果为奇数，打印坐左边；偶数打印坐右边。
 
 > 格式3：
 > ```java
@@ -514,9 +415,9 @@ switch(表达式){
         }
 ```
 
-[练习](C-Switch/src/Demo/Exercise1.java)：运动计划
+练习：运动计划 【[CODE](C-Switch/src/Demo/Exercise1.java)】
 
-*点击[练习]查看代码*
+
 
 键盘录入星期数，显示当天的运动项目。
 
@@ -577,6 +478,67 @@ switch(num){
 > - 其他按键也退出服务
 
 #### 1.4.3 循环结构
+1. for循环
+> 格式：
+> 
+> for(初始化语句；条件判断语句；条件控制语句){
+>    循环体语句；
+> }
+
+> 练习： 打印1-5，正着打印一遍，反着打印一遍 【[CODE](D-For/src/Demo/Exercise1.java)】
+
+> 练习：求1-100之间的和 【[CODE](D-For/src/Demo/Exercise2.java)】
+> 
+> -注意：累加求和的变量定义在循环外面
+
+> 练习：求1-100之间的偶数和 【[CODE](D-For/src/Demo/Exercise3.java)】
+
+> 练习：键盘录入两个数字，表示一个范围，统计这个范围内既能被3整除，又能被5整除的数字个数。【[CODE](D-For/src/Demo/Exercise4.java)】
+
+
+2. while循环
+
+格式：
+ ```
+ 初始化语句；
+ while(条件判断语句){
+     循环体语句；
+     条件控制语句；
+ }
+> ```
+
+for 循环和 while 循环的对比：
+- 相同点： 运行规则相同
+- 不同点：
+-  1. for循环：知道循环次数或循环范围
+-  2. while循环：不知道循环次数和范围，只知道循环的结束条件
+
+> 练习：打印折纸次数【[CODE](E-While/src/Demo/Exercise1.java)】
+> 
+> 珠穆朗玛峰8844430毫米，一张纸厚度0.1毫米，这张纸折多少次能达到珠峰的高度？
+
+> 练习： 回文数 【[CODE](E-While/src/Demo/Exercise2.java)】
+> 
+> 键盘录入一个整数X，如果X是回文，打印true,否则打印false。
+> 
+> 回文是正序和倒序读都一样的整数。例如：121 1221
+
+> 练习： 求商和余数 【[CODE](E-While/src/Demo/Exercise3.java)】
+> 
+> 给定两个正整数，被除数和除数，将两数相除得到商和余数。要求不使用乘法，除法和%运算符
+
+3. do...while循环（不常用）
+> 格式：
+> 
+> ```
+> 初始化语句；
+> do{
+>   循环体语句；
+>   条件控制语句；
+> } while(条件判断语句)；
+> ```
+4. 循环的综合练习
+
 
 ### 1.5 方法
 
