@@ -496,6 +496,85 @@ if 语句用来判断。
 > }
 > ```
 ##### 1.4.2.2 switch 
+格式：
+- 先计算表达式的值
+- 表达式的值与case值比对，执行相关语句体，如对不上，则执行default里的语句体。break结束整个switch
+```java
+switch(表达式){
+    case 值1:
+        语句体1;
+        break;
+    case 值2:
+        语句体2;
+        break;
+    ... 
+    default:
+        语句体n+1;
+        break;
+        }
+```
+
+[练习](C-Switch/src/Demo/Exercise1.java)：运动计划
+
+*点击[练习]查看代码*
+
+键盘录入星期数，显示当天的运动项目。
+
+周一：跑步
+
+周二：游泳
+
+周三：慢走
+
+周四：动感单车
+
+周五：拳击
+
+周六：爬山
+
+周日：休息
+
+1. default 的位置和省略
+
+- 位置：可在任意位置，但建议写在最下面
+
+- 省略：可以省略，但不建议
+2. case穿透
+
+- 由于语句体中未写break导致；
+- 应用场景：多个case的语句体重复
+
+3. switch新属性
+- JDK12及以上版本可用
+范例：
+```java
+int num = 1;
+switch(num){
+    case 1 -> {
+        System.out.println("一");
+        }
+        //仅有一行代码，可省略大括号
+    case 2 -> System.out.println("二");
+    default ->System.out.println("输入错误");
+        }
+```
+4. switch 和 if 第三种格式各自的使用场景
+- switch: 把有限个数据一一列举除了，仍选其一；
+- if的第三种格式：用于对范围的判断
+
+> 练习：休息日和工作日 【[CODE](C-Switch/src/Demo/Exercise2.java)】
+> 
+> 键盘录入星期输，输出工作日、休息日。（1-5）工作日，（6-7）休息日。
+> 
+
+> 练习：预定电话选择  【[CODE](C-Switch/src/Demo/Exercise3.java)】
+> 
+> 拨打机票预定电话，语音提示：
+> - 1 机票查询
+> - 2 机票预定
+> - 3 机票改签
+> - 4 退出服务
+> - 其他按键也退出服务
 
 #### 1.4.3 循环结构
 
