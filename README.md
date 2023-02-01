@@ -1,5 +1,5 @@
 # JAVA
-JAVA学习的过程
+JAVA学习笔记
 ---
 <!-- TOC -->
 * [JAVA](#java)
