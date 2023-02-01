@@ -1,5 +1,5 @@
 # JAVA
-一个计算机小白学习JAVA的过程
+JAVA学习的过程
 ---
 <!-- TOC -->
 * [JAVA](#java)
