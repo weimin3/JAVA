@@ -956,6 +956,10 @@ for(int i = 0; i < arr.length -1 ; i++){
 
 因此要先设计类，再获取对象。
 
+** 开发中类的设计 ：**
+- 属性： 提取名词
+- 行为： 提取动词
+
 > 如何定义类：
 > 
 > 补充说明：
@@ -996,15 +1000,191 @@ for(int i = 0; i < arr.length -1 ; i++){
 >  如何使用对象
 > - 访问属性： 对象名.成员变量
 > - 访问行为：对象名.方法名(...)
+>
 
+练习：医生类 
 
+编写医生类【[CODE](H-Objection/src/Demo/Doctor.java)】，创建医生类的对象 【[CODE](H-Objection/src/Demo/Doctor_test.java)】
+
+给医生的属性赋值并调用医生类中的方法。
 
 2. 封装
+- 面向对象的三大特征：
+1） 封装：如何正确设计对象的属性和方法
+2） 继承
+3） 多态
+
+封装：对象代表什么，就封装对应的数据，并提供数据对应的行为。
+
+例如：
+
+人关门：关门行为封装在门中
+
+- private 关键字：被private修饰的成员只能在本类中才能访问, 保证数据安全性。修饰成员变量和成员方法
+```java
+public class Doctor{
+    private int age;
+    
+    //set(赋值)
+    public void setAge(int a){
+        if(a>= 18 && a <=50){
+            age = a;
+        }else{
+          System.out.println("非法数据");
+        }
+    }
+    
+    //get(获取)
+    public int getAge(){
+        return age;
+    }
+}
+
+public class DoctorTest{
+  public static void main(String[] args) {
+    //创建对象
+    Doctor d = new Doctor();
+    //赋值
+    d.setAge(30);
+    System.out.println(d.getAge());
+  }
+}
+
+```
 3. this关键字
+- 成员变量和局部变量区别：
+  1）局部变量：方法内的变量
+  2）成员变量：方法外部，类内部的变量是成员变量
+** 注意： 当成员变量和局部变量重名时，若调用成员变量，则加this， 查看以下例子
+```java
+public class Doctor{
+    //成员变量
+    private int age;
+    
+    public void method(){
+        //局部变量
+      int age = 10;
+      //System.out.println(age);//根据就近原则，打印的是method中的age
+      System.out.println(this.age);//则返回成员变量age
+    }
+}
+
+```
+```java
+public class Doctor{
+    private String name;
+    private int age;
+    
+    public void setName(String name){
+        this.name = name;
+    }
+    
+    public String getName{
+        return name;
+  }
+}
+```
 4. 构造方法
-5. 标准JavaBean
-6. 对象内存图
-7. 成员变量和局部变量区别
+- 构造方法：构造器，构造函数。 作用：在创建对象的时候给成员变量进行初始化（赋值）
+- 格式：
+- > ```java
+  > public class Student{
+  >   修饰符 类名（参数）{
+  >          方法体；
+  >    }
+  > }
+  
+特点及注意点：
+
+1）. 方法名与类名相同，大小写也要一致
+
+2）. 没有返回值类型，连void都没有
+
+3）. 没有具体的返回值（不能由return带回结果数据）
+
+4）. 如果没有定义构造方法，系统将给一个默认的无参数构造方法
+
+5）. 如果定义来构造方法，系统将不再提供默认的构造方法
+
+6）. 带参构造方法和无参构造方法，两者方法名相同，但参数不同，叫做构造方法但重载
+
+7）. 无论是否使用，都手动书写无参数构造方法和带全部参数都构造方法。（重要）
+
+例子：
+```java
+public class Student{
+    private String name;
+    private int age;
+    
+    //空参构造
+    public Student(){
+      ....
+    }
+   //带参构造
+  public Student(String name, int age){
+      this.name = name;
+      this.age = age;
+  }
+    
+}
+```
+执行时机：
+- 1. 创建对象的时候由虚拟机调用，不能手动调用构造方法
+- 2. 每创建一次对象，就会调用一次构造方法
+```java
+public class StudentTest{
+  public static void main(String[] args) {
+    //创建对象
+    //调用空参构造,如果没有写任何构造方法，则虚拟机自动加一个空参构造方法,
+    //Student s = new Student();
+    Student s = new Student("张三",18);
+    System.out.println(s.getName());//张三
+    System.out.println(s.getAge());//18
+  }
+}
+```
+5. 标准的JavaBean类
+
+结构：
+
+1). 类名需要见名知意
+
+2). 成员变量使用private修饰
+
+3). 提供至少两个构造方法：
+- 无参构造方法
+- 带全部参数的构造方法
+
+4). 成员方法
+- 提供每一个成员变量对应的setXxx()/getXxx()
+- 如果还有其他行为，也需要写上
+
+
+> 练习：【[CODE](H-Objection/src/Demo/Setup.java)】
+> 
+> 写一个网站的注册界面：
+> 
+> 用户名：
+> 
+> 密码：
+> 
+> 确认密码：
+> 
+> 邮箱：
+> 
+> 性别： 男  女
+> 
+> 年龄：
+> 
+> "注册"按钮
+> 
+快捷键说明：
+- alt+insert/alt+Fn+insert: 生成构造方法，getter and setter
+- 使用插件PTG 1秒生成标准Javabean:file-settings- plugins-marketplace - 搜索'PTG'-install-ptg to javabean
+
+6. 对象内存图（视频P87-P92）
+
+
 
 
 
