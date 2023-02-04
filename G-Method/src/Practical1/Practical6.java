@@ -1,4 +1,4 @@
-package Practical;
+package Practical1;
 /*
 练习：数字加密
 > 某系统的数字密码大于0，比如1983，采用加密方式进行传输。

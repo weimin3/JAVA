@@ -1,4 +1,4 @@
-package Practical;
+package Practical1;
 /*
 加密的数据解密出来。8346--> 1983
  */

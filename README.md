@@ -566,20 +566,20 @@ for 循环和 while 循环的对比：
 
 6. 练习
 
-> 练习：逢7过 【[CODE](E-While/src/Practical/Practical1.java)】
+> 练习：逢7过 【[CODE](E-While/src/Practical1/Practical1.java)】
 > 
 > 从任意一个数字开始报数，当报当数字是包含7或者7的倍数时，则过。 使用程序打印1-100之间满足逢7必过规则的数据。
 
-> 练习：求平方根 【[CODE](E-While/src/Practical/practical2.java)】
+> 练习：求平方根 【[CODE](E-While/src/Practical1/practical2.java)】
 > 
 > 键盘录入一个大于等于2的整数x，计算并返回X的平方根。结果只保留整数部分，小数部分被舍去。
 
-> 练习： 求质数 【[CODE](E-While/src/Practical/Practical3.java)】 【[优化代码](E-While/src/Practical/practical4.java)】
+> 练习： 求质数 【[CODE](E-While/src/Practical1/Practical3.java)】 【[优化代码](E-While/src/Practical1/practical4.java)】
 > 
 > 键盘录入一个正整数，判断该整数是否是一个质数。质数是只能被1和其本身整除的数。
 
 
-> 练习：猜数字游戏 【[CODE](E-While/src/Practical/Practical5.java)】
+> 练习：猜数字游戏 【[CODE](E-While/src/Practical1/Practical5.java)】
 > 
 > 程序自动生成1-100之间的随机数，使用程序实现猜出这个数字是多少？
 > > - 获取随机数的步骤：
@@ -816,7 +816,7 @@ for 循环和 while 循环的对比：
 - 2. 引用数据类型: 数据值存储在其他空间，自己空间存储的是其他空间的地址值
 
 ### 1.7 练习题
-> 练习：买机票 【[CODE](G-Method/src/Practical/Practical1.java)】
+> 练习：买机票 【[CODE](G-Method/src/Practical1/Practical1.java)】
 > 
 > 机票价格根据淡旺季，头等舱和经济舱不同；
 > 
@@ -826,12 +826,12 @@ for 循环和 while 循环的对比：
 > 
 > ** control + alt +m自动抽取方法
 
-> 练习：找质数 【[CODE](G-Method/src/Practical/Practical2.java)】
+> 练习：找质数 【[CODE](G-Method/src/Practical1/Practical2.java)】
 > 
 > 判断101-200之间有多少质数，并输出所有质数。
 >
 
-> 练习：开发验证码 【[CODE](G-Method/src/Practical/Practical3.java)】
+> 练习：开发验证码 【[CODE](G-Method/src/Practical1/Practical3.java)】
 > 
 > 定义方法随机生成一个5位验证码。
 > 
@@ -843,12 +843,12 @@ for 循环和 while 循环的对比：
 > *重点： 如何生成a-z A-Z字母表
 
 
-> 练习：数组元素的复制 【[CODE](G-Method/src/Practical/Practical4.java)】
+> 练习：数组元素的复制 【[CODE](G-Method/src/Practical1/Practical4.java)】
 > 
 > 将一个数组中的元素复制到另一个新数组中
 >
 
-> 练习：评委打分 【[CODE](G-Method/src/Practical/Practical5.java)】
+> 练习：评委打分 【[CODE](G-Method/src/Practical1/Practical5.java)】
 > 
 > 在歌唱比赛中，有6位评委给选手打分，分数范围是1-100之间的整数；
 > 
@@ -856,7 +856,7 @@ for 循环和 while 循环的对比：
 > 
 > 请完成上述过程并计算出选手的得分
 
-> 练习：数字加密 【[CODE](G-Method/src/Practical/Practical6.java)】
+> 练习：数字加密 【[CODE](G-Method/src/Practical1/Practical6.java)】
 > 
 > 某系统的数字密码大于0，比如1983，采用加密方式进行传输。
 > 
@@ -864,16 +864,16 @@ for 循环和 while 循环的对比：
 > 
 > 先得到每位数，然后每位数加上5，再对10求余，最后将所有数字反转，得到一串新数。
 > 
-> 数字解密 【[CODE](G-Method/src/Practical/Practical7.java)】
+> 数字解密 【[CODE](G-Method/src/Practical1/Practical7.java)】
 > 
 > 加密的数据解密出来。8346--> 1983
 
-> 练习： 抢红包 【[CODE](G-Method/src/Practical/Practical8.java)】【[优化代码](G-Method/src/Practical/practical9.java)】
+> 练习： 抢红包 【[CODE](G-Method/src/Practical1/Practical8.java)】【[优化代码](G-Method/src/Practical1/practical9.java)】
 > 
 > 有5个现金红包{2，588，888，1000，10000}，代码模拟抽奖，打印每个奖项，奖项出现顺序随机且不重复。
 > 
  
-> 练习：模拟双色球 【[CODE](G-Method/src/Practical/Practical10.java)】
+> 练习：模拟双色球 【[CODE](G-Method/src/Practical1/Practical10.java)】
 > 
 > 投注号码有两部分组成：6个红球和1个蓝球，红球从1-33中选择，蓝球从1-16中选择。
 > 
@@ -1182,7 +1182,49 @@ public class StudentTest{
 - alt+insert/alt+Fn+insert: 生成构造方法，getter and setter
 - 使用插件PTG 1秒生成标准Javabean:file-settings- plugins-marketplace - 搜索'PTG'-install-ptg to javabean
 
-6. 对象内存图（视频P87-P92）
+6. 对象内存图（视频P87-P92)
+7. 综合练习
+- 1. 文字版格斗游戏：
+ * 初级【[CODE](H-Objection/src/Practical1)】
+ 
+ 游戏中每个角色的姓名，血量都不同。选定人物时，信息就被确定下来。
+ 
+ 模拟回合版游戏：例如："乔峰举起拳头打了鸠摩智以下，造成XX点伤害，鸠摩智还剩下xxx点血"，最后判断谁的血量先为0
+ 
+ * 进阶【[]()】
+   * 关于System.out.printf():
+     - 有两部分参数，第一部分参数，要输出的内容%s(占位)，第二部分参数为填充的数据。```System.out.printf("你好呀%s","张三")``` 输出结果为"你好呀张三" 
+     - 不可换行
+   * 需求：增加两个属性 gender 和 face(长相随机)
+     - boyfaces={"风流俊雅","气宇轩昂","相貌英俊","五官端正","相貌平平","一塌糊涂","面目狰狞"}
+     - girlfaces={"美轮美奂","成鱼落雁"，"亭亭玉立"，"身材姣好"，"相貌平平"，"相貌简陋"，"惨不忍睹"}
+     - 对攻击增加描述
+       - ```
+         attcks_desc = {
+          "%s使出了一招【背心钉】，转到对方的身后，一掌向%s背心的灵台穴拍去",
+          "%s使出一招【游空探爪】，飞起身形自半空中变掌为爪锁向%s",
+          "%s大喝一声，身形下伏，一招【霹雷坠地】，锤向%s双腿",
+          "%s运气于掌，一瞬间掌心变得血红，一式【掌心雷】，推向%s",
+          "%s阴手翻起阳手跟进，一招【没遮拦】，结结实实锤向%s",
+          "%s上步抢身，招中套招，一招【劈挂连环】，连环功向%s"}
+        
+         对受伤增加描述
+         injureds_desc = {
+         "结果%s退了半步，毫发无伤"，//血量>90
+         "结果给%s造成一处瘀伤"，//血量80～90
+         "结果一击命中，%s得弯下腰"，//血量70~80
+         "结果%s痛苦地闷哼了一声，显然受了一点内伤"，//60-70
+         "结果%s摇摇晃晃，一跤摔倒在地"，//40-60
+         "结果%s脸色一下变得惨白，连退了好几步"，//20-40
+         "结果【轰】的一声，%s口中献血狂喷而出"，/10-20
+         "结果%s一声惨叫，像滩烂泥般塌了下去"//小于10
+         }
+         ```
+   
+
+
+> - 对象数组练习
+> - 购物车
 
 
 

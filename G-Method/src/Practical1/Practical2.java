@@ -1,4 +1,4 @@
-package Practical;
+package Practical1;
 /*
 练习：找质数
 判断101-200之间有多少质数，并输出所有质数。

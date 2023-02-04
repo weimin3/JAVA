@@ -1,4 +1,4 @@
-package Practical;
+package Practical1;
 /*
 优化
 练习： 求质数

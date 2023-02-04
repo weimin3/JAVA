@@ -1,4 +1,4 @@
-package Practical;
+package Practical1;
 //将一个数组中的元素复制到另一个新数组中
 public class Practical4 {
     public static void main(String[] args) {

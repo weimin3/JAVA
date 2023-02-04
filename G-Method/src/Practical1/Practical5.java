@@ -1,6 +1,4 @@
-package Practical;
-
-import com.sun.jdi.PathSearchingVirtualMachine;
+package Practical1;
 
 import java.util.Scanner;
 

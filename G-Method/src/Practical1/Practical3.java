@@ -1,4 +1,4 @@
-package Practical;
+package Practical1;
 /*
 > 练习：开发验证码 【[CODE]()】
 > 定义方法随机生成一个5位验证码。
