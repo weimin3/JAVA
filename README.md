@@ -1191,7 +1191,7 @@ public class StudentTest{
  
  模拟回合版游戏：例如："乔峰举起拳头打了鸠摩智以下，造成XX点伤害，鸠摩智还剩下xxx点血"，最后判断谁的血量先为0
  
- * 进阶【[]()】
+ * 进阶【[CODE](H-Objection/src/Practical2)】
    * 关于System.out.printf():
      - 有两部分参数，第一部分参数，要输出的内容%s(占位)，第二部分参数为填充的数据。```System.out.printf("你好呀%s","张三")``` 输出结果为"你好呀张三" 
      - 不可换行
@@ -1220,8 +1220,6 @@ public class StudentTest{
          "结果%s一声惨叫，像滩烂泥般塌了下去"//小于10
          }
          ```
-   
-
 
 > - 对象数组练习
 > - 购物车
