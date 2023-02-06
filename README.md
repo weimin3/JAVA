@@ -1259,17 +1259,39 @@ public class StudentTest{
           3. 要求：再次添加一个学生对象，并在添加时进行学号的唯一性判断。 添加完毕后，遍历所有学生信息
           4. 要求：通过id删除学生信息，如存在，则删除，如不存在，则提示删除失败。删除完毕后，遍历所有学生信息。
           5. 查询数组id为"3"的学生，如存在，则将其年龄+1岁
-          
- 
-
-
-
-
-
 ### 1.9 API
-
+API(Application Programming Interface):应用程序编程接口。例如Scanner,Random
+API帮助文档
 ### 1.10 字符串
+应用场景：用户登陆，字符串比较，字符串转换
+1. String:java.lang.String类代表字符串
+* 注意点：
+ - 字符串的内容是不会发生改变的，它的对象在创建后不能被更改
+* 创建String对象的两种方式：
+ - 直接赋值： String name = "张三"
+ - new: 用空参构造创造字符串对象
+```java
+//直接赋值
+String s1 = "abc";
+//使用new的方法获取一个字符串对象
+//空参构造
+String s2 = new String()
+//传递一个字符数组，根据字符数组的内容再创建一个字符串对象
+char[] ch={'a','b','c',d}
+String s3= new String(ch);
 
+//根据一个字节数组，根据字节数组的内容创建一个新的字符串对象
+// 应用场景：网络中传播的数据是字节信息，需对字节信息进行转换，转换成字符串
+byte[] bytes = {97,98,99,100};//
+String s4 = new String(bytes);//输出结果是abcd
+
+```
+
+2. StringBuilder
+3. StringJonier
+4. StringBuffer
+5. Pattern
+6. Matcher
 ### 1.11 集合
 
 ### 1.12 拼图游戏（综合应用）
