@@ -1266,10 +1266,10 @@ API帮助文档
 应用场景：用户登陆，字符串比较，字符串转换
 1. String:java.lang.String类代表字符串
 * 注意点：
- - 字符串的内容是不会发生改变的，它的对象在创建后不能被更改
+   - 字符串的内容是不会发生改变的，它的对象在创建后不能被更改
 * 创建String对象的两种方式：
- - 直接赋值： String name = "张三"
- - new: 用空参构造创造字符串对象
+   - 直接赋值： String name = "张三"
+   - new: 用空参构造创造字符串对象
 ```java
 //直接赋值
 String s1 = "abc";
@@ -1286,6 +1286,31 @@ byte[] bytes = {97,98,99,100};//
 String s4 = new String(bytes);//输出结果是abcd
 
 ```
+* Java常用方法(比较)
+   1. 关于"=="：
+      - 基本数据类型：比较的是数据值
+      - 引用数据类型：比较的是地址值
+   2. 字符串比较：
+      - boolean equals方法(要比较的字符串)：完全一样才为true
+      - ```String s1 = new String("abc"); String s2 = "abc"; boolean result = s1.euqal(s2)```
+      - boolean equalsIgoreCase(要比较的字符串)：忽略大小写的比较
+   
+练习：用户登陆 【[CODE](H-Objection/src/Practical8/SignIn.java)】
+   - 已知正确的用户名和密码，请用程序实现模拟用户登陆，总共三次机会，登陆后，给出相应的提示
+
+
+练习：遍历字符串 【[CODE](Practical8/Exercise2.java)】
+   - 键盘录入一个字符串，使用程序实现在控制台遍历该字符串
+    * 相关知识点：
+      - public  char charAt(int index):根据索引返回字符
+      - public int length():返回此字符串的长度
+      - 数组的长度：数组名.length
+      - 字符串的长度：字符串对象.length()
+
+练习：统计字符次数 【[CODE]()】
+- 键盘录入一个字符串，统计该字符串中大写字母，小写字母，数字出现的次数
+  
+
 
 2. StringBuilder
 3. StringJonier
