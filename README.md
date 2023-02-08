@@ -1307,8 +1307,19 @@ String s4 = new String(bytes);//输出结果是abcd
       - 数组的长度：数组名.length
       - 字符串的长度：字符串对象.length()
 
-练习：统计字符次数 【[CODE]()】
+练习：统计字符次数 【[CODE](Practical8/Exercise3.java)】
 - 键盘录入一个字符串，统计该字符串中大写字母，小写字母，数字出现的次数
+
+练习：拼接字符串 【[CODE](Practical8/Exercise4.java)】
+- 定义一个方法，把int数组中的数据按照指定的格式拼接成一个字符串返回。
+- 调用该方法，并在控制台输出结果
+
+练习：字符串反转 【[CODE](Practical8/Exercise5.java)】
+- 定义一个方法，实现字符串反转
+- 键盘录入一个字符串，调用该方法后，在控制台输出结果
+
+练习：金额转换 【[CODE](Practical8/Exercise6.java)】
+- 输入一个整数，转换成中文大写，例如：12345 转换成 壹万贰千叁佰肆拾伍元
   
 
 
