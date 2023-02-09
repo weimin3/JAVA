@@ -1320,10 +1320,48 @@ String s4 = new String(bytes);//输出结果是abcd
 
 练习：金额转换 【[CODE](H-Objection/src/Practical8/Exercise6.java)】
 - 输入一个整数，转换成中文大写，例如：12345 转换成 壹万贰千叁佰肆拾伍元
+
+练习：手机号屏蔽 【[CODE](H-Objection/src/Practical8/Exercise7.java)】
+- 131****9876
+- 知识点：
+  - String substring(int beginIndex, int endIndex)截取，包头不包尾，只有返回值才是截取的小串
+  - String substring(int begionIndex)截取到末尾
+
+练习：身份证信息查看 【[CODE](H-Objection/src/Practical8/Exercise8.java)】
+  - 1-2位省份
+  - 3-4位城市
+  - 5-6位区县
+  - 7-14位：出生年月日
+  - 15-16：所在地派出所
+  - 17：性别（奇数是男性，偶数是女性）
+  - 18：个人信息码（随机产生）
+  - 要求取出7-14位，17位，生成人物信息：
+    - 出生年月日： XXXX年x月X日
+    - 性别：男/女
+
+练习： 敏感词替换 
+  - 知识点：
+    - String replace(旧值,新值)：字符串本身不发生变化，只有返回值才是替换结果 
   
-
-
+  
 2. StringBuilder
+* 作用：是一个容器，创建后内容可变，提高字符串的操作效率
+* 构造方法
+  - 空参构造： public StringBuilder()
+  - 含参构造：public StringBuilder(String str)
+* 常用方法
+  - public StringBuilder append(任意类型)：添加数据，并返回对象本身
+  - public StringBuilder reverse()：反转容器内的内容
+  - public int length(): 返回长度（字符出现的个数）
+  - public String toString(): 通过toString()实现把StringBuilder转换为String
+* 使用场景
+  - 字符串的拼接
+  - 字符串的反转
+* 练习： 对称字符串 【[CODE](H-Objection/src/Practical8/Exercise9.java)】
+  - 键盘接收一个字符串，程序判断该字符串是否是对称字符串，并在控制台打印出是与否。
+* 练习： 拼接字符串【[CODE](H-Objection/src/Practical8/Exercise10.java)】
+  - 定义一个方法，把int数组中的数据按照指定的格式拼接成一个字符串返回
+  - 调用该方法，在控制台输出结果
 3. StringJonier
 4. StringBuffer
 5. Pattern
