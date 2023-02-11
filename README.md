@@ -1395,6 +1395,40 @@ String s4 = new String(bytes);//输出结果是abcd
        1. 用subString进行截取，把左边的字符截取出来拼接到右侧去
        2. 把字符串变成一个字符数组，调整字符数组内数据，最后把字符数组变成字符串
 ### 1.11 集合
+* 1. 集合与数组对比：
+- 集合可以自动扩容，长度可变；数组长度固定
+- 集合可以存储引用数据类型，基本数据类型的存储需要包装类；数组可以存储基本数据类型，也可存储引用数据类型。
+* 2. ArrayList
+- 格式：```ArrayList<数据类型> list = new ArrayList<>();```
+- 成员方法：
+  - 增加：boolean add(E e),添加元素，返回值表示是否添加成功 ```boolean result = list.add("aaa")``` result = true
+  - 删除:
+    - boolean remove(E e) ```boolean result = list.remove("aaa")```
+    - E remove(int index):根据索引进行删除。```String str = list.remove(0)```
+  - 修改: E set(int index,E e) ```String result = list.set(1,"ddd")``` ddd替代原1索引上的数据
+  - 查询：E get(index) 
+  - 获取长度：int size()
+  - 遍历集合
+   ```python
+  for(int i = 0;i< list.size();i++){
+      //i 表示索引
+      // list.get(i): 表示元素
+      String str = list.get(i);
+      System.out.println(str);
+  }
+   ```
+* 练习：集合的遍历 【[CODE](I-Set/src/Demo/Exercise1.java)】
+- 定义一个集合，添加字符串，
+
+* 练习：添加数字并遍历 【[CODE](I-Set/src/Demo/Exercise2.java)】
+- 定义一个集合，添加数字，并进行遍历
+
+* 练习：添加学生对象并遍历 【[CODE](I-Set/src/Demo/Exercise3.java)】
+- 定义一个集合，添加一些学生对象，并进行遍历。 学生类的属性为：姓名，年龄
+- 改进：要求数据来自键盘录入【[CODE](I-Set/src/Demo/Exercise4.java)】
+
+
+
 
 ### 1.12 拼图游戏（综合应用）
 
