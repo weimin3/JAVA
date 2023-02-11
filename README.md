@@ -1395,10 +1395,10 @@ String s4 = new String(bytes);//输出结果是abcd
        1. 用subString进行截取，把左边的字符截取出来拼接到右侧去
        2. 把字符串变成一个字符数组，调整字符数组内数据，最后把字符数组变成字符串
 ### 1.11 集合
-* 1. 集合与数组对比：
+1. 集合与数组对比：
 - 集合可以自动扩容，长度可变；数组长度固定
 - 集合可以存储引用数据类型，基本数据类型的存储需要包装类；数组可以存储基本数据类型，也可存储引用数据类型。
-* 2. ArrayList
+2. ArrayList
 - 格式：```ArrayList<数据类型> list = new ArrayList<>();```
 - 成员方法：
   - 增加：boolean add(E e),添加元素，返回值表示是否添加成功 ```boolean result = list.add("aaa")``` result = true
@@ -1418,14 +1418,14 @@ String s4 = new String(bytes);//输出结果是abcd
   }
    ```
 * 练习：集合的遍历 【[CODE](I-Set/src/Demo/Exercise1.java)】
-- 定义一个集合，添加字符串，
+  - 定义一个集合，添加字符串，
 
 * 练习：添加数字并遍历 【[CODE](I-Set/src/Demo/Exercise2.java)】
-- 定义一个集合，添加数字，并进行遍历
+  - 定义一个集合，添加数字，并进行遍历
 
 * 练习：添加学生对象并遍历 【[CODE](I-Set/src/Demo/Exercise3.java)】
-- 定义一个集合，添加一些学生对象，并进行遍历。 学生类的属性为：姓名，年龄
-- 改进：要求数据来自键盘录入【[CODE](I-Set/src/Demo/Exercise4.java)】
+  - 定义一个集合，添加一些学生对象，并进行遍历。 学生类的属性为：姓名，年龄
+  - 改进：要求数据来自键盘录入【[CODE](I-Set/src/Demo/Exercise4.java)】
 
 
 
