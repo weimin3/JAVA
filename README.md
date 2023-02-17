@@ -1155,7 +1155,7 @@ public class StudentTest{
 
 6. 对象内存图（视频P87-P92)
 7. 综合练习
-- 1. 文字版格斗游戏：
+* 文字版格斗游戏：
  * 初级【[CODE](H-Objection/src/Practical1)】
    - 需求：
      1. 游戏中每个角色的姓名，血量都不同。选定人物时，信息就被确定下来。
@@ -1190,46 +1190,46 @@ public class StudentTest{
          "结果%s一声惨叫，像滩烂泥般塌了下去"//小于10
          }
          ```
- - 2. 对象数组练习 
-       * 练习1【[CODE](H-Objection/src/Practical3)】
-         - 需求：
-           1. 定义数组存储3个商品对象
-           2. 商品的属性：商品的ID,名字，价格，库存
-           3. 创建三个商品对象，并把商品对象存入到数组当中
+* 对象数组练习 
+* 练习1【[CODE](H-Objection/src/Practical3)】
+  - 需求：
+    1. 定义数组存储3个商品对象
+    2. 商品的属性：商品的ID,名字，价格，库存
+    3. 创建三个商品对象，并把商品对象存入到数组当中
 
-      * 练习2【[CODE](H-Objection/src/Practical4)】
-        - 需求：
-          1. 定义数组存储3部汽车对象
-          2. 汽车的属性：品牌，价格，颜色
-          3. 创建三个汽车对象，数据通过键盘录入而来，并把数据存入数组当中
-        - 键盘录入：
-          * nextInt():接收整数
-          * nextDouble():接收小数
-          * next():接收字符串
-          //上述符号为第一套体系，遇到空格，制表符，回车则停止接受，后面的数据由第二次录入的变量接收(可能什么也没有输入)
-          * nextLine():键盘接收字符串
-          //上述符号是第二套体系，可以接收空格，制表符，遇到回车才停止接收数据。
-          * 两套体系不可以混用
+* 练习2【[CODE](H-Objection/src/Practical4)】
+  - 需求：
+    1. 定义数组存储3部汽车对象
+    2. 汽车的属性：品牌，价格，颜色
+    3. 创建三个汽车对象，数据通过键盘录入而来，并把数据存入数组当中
+  - 键盘录入：
+    * nextInt():接收整数
+    * nextDouble():接收小数
+    * next():接收字符串
+      //上述符号为第一套体系，遇到空格，制表符，回车则停止接受，后面的数据由第二次录入的变量接收(可能什么也没有输入)
+    * nextLine():键盘接收字符串
+      //上述符号是第二套体系，可以接收空格，制表符，遇到回车才停止接收数据。
+    * 两套体系不可以混用
 
-      * 练习3【[CODE](H-Objection/src/Practical5)】
-        - 需求：
-          1. 定义数组存储3部手机对象
-          2. 手机的属性：品牌，价格，颜色
-          3. 计算出3部手机的平均价格
+* 练习3【[CODE](H-Objection/src/Practical5)】
+  - 需求：
+    1. 定义数组存储3部手机对象
+    2. 手机的属性：品牌，价格，颜色
+    3. 计算出3部手机的平均价格
           
-      * 练习4【[CODE](H-Objection/src/Practical6)】
-        - 需求：
-          1. 定义数组存储4位好友信息
-          2. 好友的属性：姓名，年龄，性别，爱好
-          3. 计算出四位好友的平均年龄
-          4. 统计年龄比平均值低的好友个数，并把他们的信息打印出来
-      * 练习5【[CODE](H-Objection/src/Practical7)】
-        - 需求：
-          1. 定义一个长度为3的数组，存储1-3名学生对象作为初始数据，学生的学号和姓名各不相同
-          2. 学生的属性：学号，姓名，年龄
-          3. 要求：再次添加一个学生对象，并在添加时进行学号的唯一性判断。 添加完毕后，遍历所有学生信息
-          4. 要求：通过id删除学生信息，如存在，则删除，如不存在，则提示删除失败。删除完毕后，遍历所有学生信息。
-          5. 查询数组id为"3"的学生，如存在，则将其年龄+1岁
+* 练习4【[CODE](H-Objection/src/Practical6)】
+  - 需求：
+    1. 定义数组存储4位好友信息
+    2. 好友的属性：姓名，年龄，性别，爱好
+    3. 计算出四位好友的平均年龄
+    4. 统计年龄比平均值低的好友个数，并把他们的信息打印出来
+* 练习5【[CODE](H-Objection/src/Practical7)】
+  - 需求：
+    1. 定义一个长度为3的数组，存储1-3名学生对象作为初始数据，学生的学号和姓名各不相同
+    2. 学生的属性：学号，姓名，年龄
+    3. 要求：再次添加一个学生对象，并在添加时进行学号的唯一性判断。 添加完毕后，遍历所有学生信息
+    4. 要求：通过id删除学生信息，如存在，则删除，如不存在，则提示删除失败。删除完毕后，遍历所有学生信息。
+    5. 查询数组id为"3"的学生，如存在，则将其年龄+1岁
 ### 1.9 API
 API(Application Programming Interface):应用程序编程接口。例如Scanner,Random
 API帮助文档
@@ -1266,11 +1266,11 @@ String s4 = new String(bytes);//输出结果是abcd
       - ```String s1 = new String("abc"); String s2 = "abc"; boolean result = s1.euqal(s2)```
       - boolean equalsIgoreCase(要比较的字符串)：忽略大小写的比较
    
-练习：用户登陆 【[CODE](H-Objection/src/Practical8/SignIn.java)】
+* 练习：用户登陆 【[CODE](H-Objection/src/Practical8/SignIn.java)】
    - 已知正确的用户名和密码，请用程序实现模拟用户登陆，总共三次机会，登陆后，给出相应的提示
 
 
-练习：遍历字符串 【[CODE](H-Objection/src/Practical8/Exercise2.java)】
+* 练习：遍历字符串 【[CODE](H-Objection/src/Practical8/Exercise2.java)】
    - 键盘录入一个字符串，使用程序实现在控制台遍历该字符串
     * 相关知识点：
       - public  char charAt(int index):根据索引返回字符
@@ -1278,27 +1278,27 @@ String s4 = new String(bytes);//输出结果是abcd
       - 数组的长度：数组名.length
       - 字符串的长度：字符串对象.length()
 
-练习：统计字符次数 【[CODE](H-Objection/src/Practical8/Exercise3.java)】
+* 练习：统计字符次数 【[CODE](H-Objection/src/Practical8/Exercise3.java)】
 - 键盘录入一个字符串，统计该字符串中大写字母，小写字母，数字出现的次数
 
-练习：拼接字符串 【[CODE](H-Objection/src/Practical8/Exercise4.java)】
+* 练习：拼接字符串 【[CODE](H-Objection/src/Practical8/Exercise4.java)】
 - 定义一个方法，把int数组中的数据按照指定的格式拼接成一个字符串返回。
 - 调用该方法，并在控制台输出结果
 
-练习：字符串反转 【[CODE](H-Objection/src/Practical8/Exercise5.java)】
+* 练习：字符串反转 【[CODE](H-Objection/src/Practical8/Exercise5.java)】
 - 定义一个方法，实现字符串反转
 - 键盘录入一个字符串，调用该方法后，在控制台输出结果
 
-练习：金额转换 【[CODE](H-Objection/src/Practical8/Exercise6.java)】
+* 练习：金额转换 【[CODE](H-Objection/src/Practical8/Exercise6.java)】
 - 输入一个整数，转换成中文大写，例如：12345 转换成 壹万贰千叁佰肆拾伍元
 
-练习：手机号屏蔽 【[CODE](H-Objection/src/Practical8/Exercise7.java)】
+* 练习：手机号屏蔽 【[CODE](H-Objection/src/Practical8/Exercise7.java)】
 - 131****9876
 - 知识点：
   - String substring(int beginIndex, int endIndex)截取，包头不包尾，只有返回值才是截取的小串
   - String substring(int begionIndex)截取到末尾
 
-练习：身份证信息查看 【[CODE](H-Objection/src/Practical8/Exercise8.java)】
+* 练习：身份证信息查看 【[CODE](H-Objection/src/Practical8/Exercise8.java)】
   - 1-2位省份
   - 3-4位城市
   - 5-6位区县
@@ -1310,7 +1310,7 @@ String s4 = new String(bytes);//输出结果是abcd
     - 出生年月日： XXXX年x月X日
     - 性别：男/女
 
-练习： 敏感词替换 
+* 练习： 敏感词替换 
   - 知识点：
     - String replace(旧值,新值)：字符串本身不发生变化，只有返回值才是替换结果 
   
@@ -1353,13 +1353,13 @@ String s4 = new String(bytes);//输出结果是abcd
   - 如果键盘录入的数字包含0，可以变成" "(长度为0的字符串)
 
 * 练习：调整字符串 【[Method1](H-Objection/src/Practical8/Exercise13.java)】【[Method2](H-Objection/src/Practical8/Exercise14.java)】
-- 给定两个字符串，A 和 B。
-- A的旋转操作就是将A最左边的字符移动到最右边。例如：A='abcde'在移动一次之后结果就是'bcdea'
-- 如果在若干次调整操作之后A能变成B，返回True,否则false
-  - 知识点：
-    * 有两个方法修改字符串的内容：
-       1. 用subString进行截取，把左边的字符截取出来拼接到右侧去
-       2. 把字符串变成一个字符数组，调整字符数组内数据，最后把字符数组变成字符串
+  - 给定两个字符串，A 和 B。
+  - A的旋转操作就是将A最左边的字符移动到最右边。例如：A='abcde'在移动一次之后结果就是'bcdea'
+  - 如果在若干次调整操作之后A能变成B，返回True,否则false
+    - 知识点：
+      * 有两个方法修改字符串的内容：
+         1. 用subString进行截取，把左边的字符截取出来拼接到右侧去
+         2. 把字符串变成一个字符数组，调整字符数组内数据，最后把字符数组变成字符串
 ### 1.11 集合
 1. 集合与数组对比：
 - 集合可以自动扩容，长度可变；数组长度固定
@@ -1404,8 +1404,7 @@ String s4 = new String(bytes);//输出结果是abcd
 
 ### 1.12 综合应用
 * 学生管理系统【[CODE](J-projects/StudentsSystem)】
-  - 需求文档：
-    - 采取控制台的方式书写学生管理系统
+  - 需求文档：- 采取控制台的方式书写学生管理系统 (详细要求见代码注释)
 
 
 ## 2. JAVA 进阶知识
