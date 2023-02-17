@@ -1426,6 +1426,14 @@ String s4 = new String(bytes);//输出结果是abcd
 * 练习：添加学生对象并遍历 【[CODE](I-Set/src/Demo/Exercise3.java)】
   - 定义一个集合，添加一些学生对象，并进行遍历。 学生类的属性为：姓名，年龄
   - 改进：要求数据来自键盘录入【[CODE](I-Set/src/Demo/Exercise4.java)】
+* 练习：添加用户对象并判断是否存在 【[CODE](I-Set/src/Demo/Exercise5.java)】
+  - main 方法中定义一个集合，存入三个用户对象，用户属性为：id,username,password
+  - 定义一个方法，根据id查找对应的用户信息，如存在，返回true，如不存在，返回false
+  - 改进：定义一个方法，根据id查找对应的用户信息，如存在返回索引，如不存在，返回-1 【[CODE](I-Set/src/Demo/Exercise6.java)】
+* 练习： 添加手机对象并返回要求的数据 【[CODE](I-Set/src/Demo/Exercise7.java)】
+  - 定义javabean类:phone; phone属性：品牌，价格
+  - main方法中定义一个集合，存入三个手机对象
+  - 定义一个方法，将价格低于3000的手机信息返回
 
 
 
