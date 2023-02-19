@@ -13,6 +13,8 @@
       <module fileurl="file://$PROJECT_DIR$/I-Set/I-Set.iml" filepath="$PROJECT_DIR$/I-Set/I-Set.iml" />
       <module fileurl="file://$PROJECT_DIR$/J-projects/J-projects.iml" filepath="$PROJECT_DIR$/J-projects/J-projects.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JAVA.iml" filepath="$PROJECT_DIR$/.idea/JAVA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/K-Static/K-Static.iml" filepath="$PROJECT_DIR$/K-Static/K-Static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L-Extends/L-Extends.iml" filepath="$PROJECT_DIR$/L-Extends/L-Extends.iml" />
       <module fileurl="file://$PROJECT_DIR$/J-projects/StudentSystem2/StudentSystem2.iml" filepath="$PROJECT_DIR$/J-projects/StudentSystem2/StudentSystem2.iml" />
       <module fileurl="file://$PROJECT_DIR$/J-projects/StudentsSystem/StudentsSystem.iml" filepath="$PROJECT_DIR$/J-projects/StudentsSystem/StudentsSystem.iml" />
     </modules>
