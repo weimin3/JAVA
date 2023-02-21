@@ -2,18 +2,30 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class StudentSystem {
+    static ArrayList<Student> list = new ArrayList<>();
+    //静态代码块的应用
+    static {
+        //添加一些用户信息
+        list.add(new Student("001","zs",23,"hhhh"));
+    }
+
+    //final 的应用
+    private static final String ADD_STUDENT = "1";
+    private static final String DEL_INFOR = "2";
+    private static final String EDIT_ARR = "3";
+    private static final String QUERY = "4";
     public static void main(String[] args) {
         //创建集合存储学生信息
-        ArrayList<Student> list = new ArrayList<>();
+
         while(true){
             //调用主界面方法，并接收用户的选择
             String input = intface();
             // 根据输入值调用不同的方法：添加学生，删除学生，修改学生信息，查询学生信息，退出
             switch(input){
-                case "1" -> addStudent(list);
-                case "2" -> delInfor(list);
-                case "3" -> editArr(list);
-                case "4" -> query(list);
+                case ADD_STUDENT -> addStudent(list);
+                case DEL_INFOR -> delInfor(list);
+                case EDIT_ARR -> editArr(list);
+                case QUERY -> query(list);
                 default -> {
                     System.out.println("退出");
                     System.exit(0);
