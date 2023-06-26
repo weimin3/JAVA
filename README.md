@@ -1744,5 +1744,5 @@ public class Student extends Person{}
   - 应用场景：【[例子](L-Extends/src/a08extenddemo8)】 
     - 当方式的参数是接口或者类时，以接口为例，可以传递这个接口的实现类对象，如果实现类只要使用一次，就可以用匿名内部类简化代码
   
-8. 拼图小游戏 【[CODE]()】补
+
 ## 2. JAVA 进阶知识
